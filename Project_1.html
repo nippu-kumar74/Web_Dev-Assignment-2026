@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width:100px;
+            font-size: 25px;
+        }
+        h1{
+            text-align: center;
+        }
+        td,th{
+            
+            padding: 15px 25px;
+            height: 50px;
+
+        }
+        th{
+            background-color: yellow;
+        }
+        td{
+            background-color: orange;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <table border="3" align="center">
+        <h1>Time Table</h1>
+        <tr>
+            <th> </th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th colspan="2">5</th>
+            <th colspan="2">6</th>
+            
+        </tr>
+         <tr>
+            <th>Mon</th>
+            <td>CP</td>
+            <td>HTML </td>
+            <td>CSS </td>
+            <td rowspan="6">B<br>R<br>E<br>A<br>K</td>
+            <td colspan="2">Java </td>
+            <td colspan="2">C++</td>
+
+
+        </tr>
+        <tr>
+            <th>Tue</th>
+            <td rowspan="3">Eng</td>
+            <td colspan="2">Web Dev</td>
+            <td>C++</td>
+            <td>HTML</td>
+            <td>CSS</td>
+            <td rowspan="2">OS</td>
+            
+            
+        </tr>
+        <tr>
+            <th>Wed</th>
+            <td colspan="2"> C++</td>
+            <td colspan="3"> Python</td>
+        </tr>
+        <tr>
+            <th>Thur</th>
+            <td colspan="2">Java</td>
+            <td>Eng</td>
+            <td>CP</td>
+            <td colspan="2">Networks</td>
+        </tr>
+        <tr>
+            <th>Fri</th>
+            <td colspan="3"> Data Science</td>
+            <td colspan="2">C++</td>
+            <td colspan="2"> Python</td>
+        </tr>
+    
+    </table>
+</body>
+</html>
