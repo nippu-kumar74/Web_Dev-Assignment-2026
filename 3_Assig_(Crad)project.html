@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        .container {
+            display: flow-root;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .card {
+            width: 560px;
+            height: 230px;
+            padding: 20px;
+            /* Box Model */
+            margin: 10px;
+            /* Box Model */
+            border: 2px solid black;
+            background-color: white;
+            text-align: center;
+            image-orientation: initial;
+
+        }
+        .card img{
+            width: 300px;
+            height: 80px;
+            box-shadow: 10px 10px 30px goldenrod;
+        }
+
+        .card:hover {
+            background-color:greenyellow;
+            border: 5px solid black;
+            box-shadow: 10px 10px 30px darkslategray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB4KP02IvuWWnfJi-4KNBSJ0vSpXAVb76DWQ&s">
+            <h2>Card 1</h2><br>
+            <ul>
+                <li>Name: Nippu prajapati</li>
+                <li>Address: Bihar</li>
+
+            </ul>
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB4KP02IvuWWnfJi-4KNBSJ0vSpXAVb76DWQ&s">
+            <h2>Card 2</h2><br>
+            <ul>
+                <li>Name:Nippu prajapati</li>
+                <li>Address: Bihar</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB4KP02IvuWWnfJi-4KNBSJ0vSpXAVb76DWQ&s">
+            <h2>Card 3</h2><br>
+            <ul>
+                <li>Name: Nippu prajapati</li>
+                <li>Address: Bihar</li>
+
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
