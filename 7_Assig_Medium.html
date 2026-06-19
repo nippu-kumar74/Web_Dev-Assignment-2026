@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium Clone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-bottom: 1px solid #ddd;
+            background-color: aqua;
+        }
+
+        .left-nav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .left-nav input {
+            padding: 8px;
+            width: 250px;
+            border-radius: 30px;
+            margin-left: 50px;
+        }
+        .menu{
+            width: 20px;
+            height: 10px;
+        }
+
+        .right-nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .get-app {
+            background: black;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .right-nav img {
+            width: 40px;
+            height: 35px;
+            border-radius: 50%;
+        }
+
+        .container {
+            display: flex;
+            background-color: aliceblue;
+        }
+
+        .sidebar {
+            width: 220px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            font-size: 30px;
+            background-color: aliceblue;
+        }
+
+        .sidebar img {
+            width: 30px;
+            height: 25px;
+
+        }
+
+        .follow-box {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid #ddd;
+        }
+
+        .following {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .follow-box p {
+            margin-top: 20px;
+            line-height: 1.5;
+            color: #555;
+            font-size: 20px;
+        }
+
+        .follow-box a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #666;
+            font-size: 20px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .tab {
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid black;
+            margin-bottom: 20px;
+
+        }
+
+        .post {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10px;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .post img {
+            width: 180px;
+            height: 120px;
+        }
+
+        .singal img {
+            width: 20px;
+            height: 15px;
+            border-radius:10px;
+
+        }
+
+        .font1 h2 {
+            font-size: 40px;
+        }
+
+        .font1 p {
+            font-size: 20px;
+        }
+        .stats {
+            color: #777;
+            display: flex;
+            gap: 50px;
+        }
+        .wid img{
+            width: 20px;
+            height: 20px;
+        }
+
+        .font2 h2 {
+            font-size: 40px;
+        }
+
+        .font2 p {
+            font-size: 20px;
+        }
+
+        .Did img {
+            width: 20px;
+            height: 15px;
+            border-radius:10px;
+
+        }
+
+        .right-sidebar {
+            border-left: 1px solid #ddd;
+            padding: 30px;
+        }
+
+        .right-sidebar h2 {
+            margin-bottom: 20px;
+        }
+
+        .staff {
+            margin-bottom: 30px;
+        }
+
+        .staff h3 {
+            margin: 10px 0;
+        }
+
+        .staff p {
+            color: gray;
+        }
+
+        .topics {
+            
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .topics div {
+            background: #f2f2f2;
+            width: 110px;
+            padding: 10px;
+            border-radius: 20px;
+            margin: 10px;
+        }
+        .like:hover{
+            background-color: blue;
+        }
+        .Save:hover{
+            background-color: black;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="left-nav">
+            <span class="menu">&#9776;</span>
+            <h1>Medium</h1>
+            <input type="text" placeholder="Search">
+        </div>
+
+        <div class="right-nav">
+            <button class="get-app">Get App</button>
+            <img src="http://static.vecteezy.com/system/resources/thumbnails/002/103/774/small_2x/hand-writing-with-pen-black-glyph-icon-vector.jpg"
+                alt="">
+            <button>wirte</button>
+            <img src="https://cdn-icons-png.flaticon.com/512/8310/8310386.png" alt="">
+            <img src="https://www.clipartmax.com/png/middle/296-2969961_no-image-user-profile-icon.png" alt="">
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png"
+                alt=""> Home
+            <br> <br>
+            <img src="https://cdn-icons-png.flaticon.com/512/225/225993.png" alt=""> Library <br><br>
+            <img src="https://www.pngitem.com/pimgs/m/404-4042686_my-profile-person-icon-png-free-transparent-png.png"
+                alt=""> Profile <br><br>
+            <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/story-icon-svg-download-png-7092215.png?f=webp&w=128"
+                alt=""> Stories <br> <br>
+            <img src="https://cdn-icons-png.flaticon.com/512/87/87578.png" alt=""> Stats <br> <br>
+
+            <div class="follow-box">
+
+                <div class="following">
+                    <span>👥</span>
+                    <span>Following</span>
+                </div>
+
+                <p>
+                    Find writers and <br>
+                    publications to follow.
+                </p>
+
+                <a href="#">See suggestions</a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Center Content -->
+
+        <main class="content">
+            <div class="tab">
+                <span>For you</span>
+                <span>Featured</span>
+            </div>
+
+
+            <div class="post">
+                <div class="font1">
+                    <div class="singal">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg"
+                            alt="">Nippu_kumar
+                    </div> <br> <br>
+                    <h2>Should You Skill Learn to Code in 2026?</h2>
+                    <p>The answer isn't as obvious as I used to believe.</p><br><br>
+                    
+                        <span class="wid">
+                            <img class="like" src="https://cdn-icons-png.flaticon.com/512/126/126473.png" alt="">3.6K &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://cdn-icons-png.flaticon.com/512/1380/1380338.png" alt="">399 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://static.vecteezy.com/system/resources/previews/026/619/156/non_2x/repost-arrow-share-icon-social-media-post-element-symbol-vector.jpg" alt="">190 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                            <img class="dislike" src="https://cdn-icons-png.flaticon.com/512/126/126504.png" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img class="save" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkZEMHsReexSZ2aUMYFfDlq_aFMaBnp-aqMg&s" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://static.thenounproject.com/png/683450-200.png" alt="">
+                        </span>
+                    
+                    
+                </div>
+
+                <img
+                    src="https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?_gl=1*1qr1222*_ga*MTY0Njc1NTc2LjE3NzI0NTMxNjg.*_ga_8JE65Q40S6*czE3ODExNjYyNzIkbzEyJGcxJHQxNzgxMTY2MzMzJGo1OSRsMCRoMA..">
+            </div>
+
+            <div class="post">
+                <div class="font2">
+                    <div class="Did">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg"
+                            alt="">Rohan_Lachetta
+                    </div> <br><br>
+                    <h2>Claude Code is Great</h2>
+                    <p>You Just Need to Learn How to Use It</p><br><br>
+                    
+                        <span class="wid">
+                            <img src="https://cdn-icons-png.flaticon.com/512/126/126473.png" alt="">6.6K &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://cdn-icons-png.flaticon.com/512/1380/1380338.png" alt="">1.1k&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://static.vecteezy.com/system/resources/previews/026/619/156/non_2x/repost-arrow-share-icon-social-media-post-element-symbol-vector.jpg" alt="">345
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                            <img src="https://cdn-icons-png.flaticon.com/512/126/126504.png" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkZEMHsReexSZ2aUMYFfDlq_aFMaBnp-aqMg&s" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://static.thenounproject.com/png/683450-200.png" alt="">
+                        </span>
+                    
+                    
+                </div>
+
+                <img
+                    src="https://images.pexels.com/photos/34803994/pexels-photo-34803994.jpeg?_gl=1*5k3qbg*_ga*MTY0Njc1NTc2LjE3NzI0NTMxNjg.*_ga_8JE65Q40S6*czE3ODExNjYyNzIkbzEyJGcxJHQxNzgxMTY3OTMyJGo1OSRsMCRoMA..">
+            </div>
+            <div class="post">
+                <div class="font1">
+                    <div class="singal">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg"
+                            alt="">Rajan_kumar
+                    </div> <br> <br>
+                    <h2>Should You Skill Learn to Code in 2026?</h2>
+                    <p>The answer isn't as obvious as I used to believe.</p><br><br>
+                    
+                        <span class="wid">
+                            <img src="https://cdn-icons-png.flaticon.com/512/126/126473.png" alt="">8.5K &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://cdn-icons-png.flaticon.com/512/1380/1380338.png" alt="">899&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://static.vecteezy.com/system/resources/previews/026/619/156/non_2x/repost-arrow-share-icon-social-media-post-element-symbol-vector.jpg" alt="">320
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                            <img src="https://cdn-icons-png.flaticon.com/512/126/126504.png" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkZEMHsReexSZ2aUMYFfDlq_aFMaBnp-aqMg&s" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://static.thenounproject.com/png/683450-200.png" alt="">
+                        </span>
+                    
+                
+                </div>
+
+                <img
+                    src="https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?_gl=1*1qr1222*_ga*MTY0Njc1NTc2LjE3NzI0NTMxNjg.*_ga_8JE65Q40S6*czE3ODExNjYyNzIkbzEyJGcxJHQxNzgxMTY2MzMzJGo1OSRsMCRoMA..">
+            </div>
+            <div class="post">
+                <div class="font1">
+                    <div class="singal">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg"
+                            alt="">Ankit_kumar
+                    </div> <br> <br>
+                    <h2>Should You Skill Learn to Code in 2025?</h2>
+                    <p>The answer isn't as obvious as I used to believe.</p><br><br>
+                    
+                        <span class="wid">
+                            <img src="https://cdn-icons-png.flaticon.com/512/126/126473.png" alt="">4.6K &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://cdn-icons-png.flaticon.com/512/1380/1380338.png" alt="">673&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://static.vecteezy.com/system/resources/previews/026/619/156/non_2x/repost-arrow-share-icon-social-media-post-element-symbol-vector.jpg" alt="">187
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                            <img src="https://cdn-icons-png.flaticon.com/512/126/126504.png" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkZEMHsReexSZ2aUMYFfDlq_aFMaBnp-aqMg&s" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <img src="https://static.thenounproject.com/png/683450-200.png" alt="">
+                        </span>
+                    
+                
+                </div>
+
+                <img
+                    src="https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?_gl=1*1qr1222*_ga*MTY0Njc1NTc2LjE3NzI0NTMxNjg.*_ga_8JE65Q40S6*czE3ODExNjYyNzIkbzEyJGcxJHQxNzgxMTY2MzMzJGo1OSRsMCRoMA..">
+            </div>
+
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+
+            <h2>Staff Picks</h2>
+
+            <div class="staff">
+                <p>devin bambrick</p>
+                <h3>Gatori Fishing in America</h3>
+                <p>6d ago</p>
+            </div>
+
+            <div class="staff">
+                <p>John DeVore</p>
+                <h3>Cigarettes are bad. I miss them.</h3>
+                <p>May 29</p>
+            </div>
+
+            <div class="staff">
+                <p>Divya Sabade</p>
+                <h3>I Sat in Engineering Meetings for Two Years</h3>
+                <p>Jun 1</p>
+            </div>
+
+            <h2>Recommended Topics</h2>
+
+            <div class="topics">
+                <div>Data Science</div>
+                <div>Technology</div>
+                <div>Writing</div>
+                <div>Programming</div>
+                <div>AI</div>
+                <div>Self Improvement</div>
+            </div>
+
+        </aside>
+
+    </div>
+
+</body>
+
+</html>
