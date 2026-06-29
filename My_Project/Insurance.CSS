@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: white;
+}
+
+.nav1 {
+    background-image: linear-gradient(to right, rgb(249, 249, 18), red);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-image: linear-gradient(to right, blue, black);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+
+}
+
+.log {
+    position: absolute;
+    right: 50px;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #add;
+}
+
+.hero h1 {
+    color: #1f3c88;
+    margin-bottom: 15px;
+}
+
+.hero img {
+    width: 150px;
+    height: 80px;
+    background-color: #ddd;
+    border-radius: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+}
+
+.section {
+    width: 90%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ddd;
+}
+
+.section h2 {
+    color: #1f3c88;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+.plans {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: auto;
+    min-width: 300px;
+    height: 350px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: aqua;
+}
+
+.card h3 {
+    color: #1f3c88;
+}
+
+.image img {
+    width: 350px;
+    height: 230px;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #1f3c88;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+form button {
+    background: #1f3c88;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+footer {
+    background: #162447;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
